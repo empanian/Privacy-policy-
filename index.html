@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — OmniChat</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#06070d;--bg2:#0a0c15;--surface:#0e1120;--surface2:#131627;--border:#1c2038;--border2:#242844;--accent:#7c6af7;--accent2:#f97fa8;--accent3:#5ef0b4;--text:#eceef8;--text2:#b8bdd4;--muted:#6b7090;--dim:#3a3f5c}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Geist',system-ui,sans-serif;font-size:16px;line-height:1.8;min-height:100vh;overflow-x:hidden}
+.hero{position:relative;padding:80px 0 60px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(124,106,247,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:900px;margin:0 auto;padding:0 32px}
+.wordmark{display:inline-flex;align-items:center;gap:10px;margin-bottom:48px;text-decoration:none}
+.wordmark-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.wordmark-text{font-size:18px;font-weight:600;background:linear-gradient(90deg,#a99cf8,#f97fa8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.3px}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;background:rgba(94,240,180,0.08);border:1px solid rgba(94,240,180,0.2);border-radius:20px;font-size:11px;font-weight:500;color:var(--accent3);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:20px}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--accent3);border-radius:50%;box-shadow:0 0 8px var(--accent3)}
+h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(40px,7vw,68px);line-height:1.08;letter-spacing:-1px;color:var(--text);margin-bottom:24px}
+h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:17px;color:var(--text2);font-weight:300;max-width:540px;line-height:1.7;margin-bottom:32px}
+.hero-meta{display:flex;gap:8px;flex-wrap:wrap}
+.meta-pill{font-size:12px;color:var(--muted);padding:5px 13px;border:1px solid var(--border2);border-radius:20px}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border2) 20%,var(--border2) 80%,transparent)}
+.main{max-width:900px;margin:0 auto;padding:60px 32px 100px;display:grid;grid-template-columns:210px 1fr;gap:48px;align-items:start}
+.sidebar{position:sticky;top:32px}
+.nav-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.nav-list{list-style:none}
+.nav-list li{margin-bottom:2px}
+.nav-list a{display:block;padding:7px 12px;font-size:13px;color:var(--muted);text-decoration:none;border-radius:6px;border-left:2px solid transparent;transition:all .15s}
+.nav-list a:hover{color:var(--text2);background:var(--surface);border-left-color:var(--accent)}
+.content{min-width:0}
+.section{margin-bottom:56px;scroll-margin-top:32px}
+.section-header{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.section-num{font-family:'Instrument Serif',serif;font-size:13px;font-style:italic;color:var(--accent);opacity:.6;flex-shrink:0}
+h2{font-family:'Instrument Serif',Georgia,serif;font-size:26px;font-weight:400;color:var(--text);letter-spacing:-0.3px;line-height:1.25}
+p{color:var(--text2);font-weight:300;margin-bottom:16px;font-size:15px}
+p:last-child{margin-bottom:0}
+.data-table{width:100%;border-collapse:collapse;margin:20px 0}
+.data-table tr{border-bottom:1px solid var(--border)}
+.data-table tr:last-child{border-bottom:none}
+.data-table td{padding:12px 0;font-size:14px;vertical-align:top}
+.data-table td:first-child{width:170px;padding-right:20px;font-weight:500;color:var(--text);font-size:13px}
+.data-table td:last-child{color:var(--text2);font-weight:300}
+.callout{background:var(--surface2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--text2);font-weight:300}
+.callout.green{border-left-color:var(--accent3)}
+.callout.pink{border-left-color:var(--accent2)}
+.callout strong{color:var(--text);font-weight:500;display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.no-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.no-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text2);font-weight:300;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;line-height:1.4}
+.no-list li::before{content:'✕';color:#f87171;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px}
+.service-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
+.service-role{font-size:12px;color:var(--muted);font-weight:300;line-height:1.6}
+.rights-list{list-style:none;margin:16px 0}
+.rights-list li{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px}
+.rights-list li:last-child{border-bottom:none}
+.rights-icon{width:28px;height:28px;background:rgba(124,106,247,0.1);border:1px solid rgba(124,106,247,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:2px}
+.rights-content strong{display:block;color:var(--text);font-weight:500;font-size:13px;margin-bottom:2px}
+.rights-content span{color:var(--text2);font-weight:300}
+.contact-section{margin-top:64px;padding:40px;background:var(--surface);border:1px solid var(--border2);border-radius:20px;position:relative;overflow:hidden;text-align:center}
+.contact-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent)}
+.contact-section h2{font-size:30px;margin-bottom:10px}
+.contact-section p{font-size:14px;max-width:420px;margin:0 auto 24px}
+.email-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;text-decoration:none;border-radius:10px;font-size:14px;font-weight:500;transition:opacity .15s,transform .15s}
+.email-btn:hover{opacity:.9;transform:translateY(-1px)}
+footer{border-top:1px solid var(--border);padding:32px;text-align:center;color:var(--muted);font-size:13px}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:720px){.main{grid-template-columns:1fr}.sidebar{display:none}.no-list,.service-grid{grid-template-columns:1fr}.hero-inner,.main{padding-left:20px;padding-right:20px}.contact-section{padding:28px 20px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="wordmark"><div class="wordmark-icon">✦</div><span class="wordmark-text">OmniChat</span></div>
+    <div class="hero-tag">Privacy First</div>
+    <h1>Your data,<br><em>your rules.</em></h1>
+    <p class="hero-sub">We believe privacy is a right, not a feature. Here is everything we collect, why we need it, and exactly what we never do with it.</p>
+    <div class="hero-meta">
+      <span class="meta-pill">📅 Effective March 2026</span>
+      <span class="meta-pill">🔖 Version 1.0</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="main">
+  <nav class="sidebar">
+    <div class="nav-label">Contents</div>
+    <ul class="nav-list">
+      <li><a href="#tldr">TL;DR</a></li>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#not-collect">What we don't</a></li>
+      <li><a href="#usage">How we use it</a></li>
+      <li><a href="#third-party">Third parties</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+
+    <div class="section" id="tldr">
+      <div class="section-header"><span class="section-num">Overview</span><h2>The short version</h2></div>
+      <div class="callout green"><strong>Bottom line</strong>We collect only what is needed to run your account and prevent abuse. We do not sell your data, show ads, or share your information with third parties for marketing.</div>
+      <p>OmniChat is a Chrome browser extension that lets you broadcast one prompt to multiple AI services simultaneously. This policy explains what personal data we collect, why, and the rights you have over it.</p>
+    </div>
+
+    <div class="section" id="collect">
+      <div class="section-header"><span class="section-num">01</span><h2>What we collect</h2></div>
+      <table class="data-table"><tbody>
+        <tr><td>Email address</td><td>To create and identify your account. Used for login and password reset emails.</td></tr>
+        <tr><td>Password</td><td>Stored as a secure bcrypt hash — never in plain text, never readable by us.</td></tr>
+        <tr><td>Daily usage count</td><td>Number of broadcasts per day, stored server-side to enforce free-tier limits.</td></tr>
+        <tr><td>Brain memory</td><td>Text you manually type into the Brain tab, synced to your account across devices.</td></tr>
+        <tr><td>Projects</td><td>Project names and descriptions you create, synced to your account.</td></tr>
+        <tr><td>Conversation history</td><td>Prompts and AI responses from your broadcasts, stored locally and optionally synced.</td></tr>
+        <tr><td>IP address</td><td>Logged temporarily at registration to limit abuse. Not stored long-term.</td></tr>
+        <tr><td>License key</td><td>Your Whop subscription key, used to verify Pro access each session.</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="section" id="not-collect">
+      <div class="section-header"><span class="section-num">02</span><h2>What we never collect</h2></div>
+      <ul class="no-list">
+        <li>AI conversation content</li><li>Browsing history</li>
+        <li>Advertising cookies</li><li>Payment card details</li>
+        <li>AI account credentials</li><li>Device identifiers</li>
+        <li>Location data</li><li>Data for ads</li>
+      </ul>
+      <div class="callout pink"><strong>API Keys</strong>Any API keys you enter are stored only in Chrome's local storage on your device. Never transmitted to our servers.</div>
+    </div>
+
+    <div class="section" id="usage">
+      <div class="section-header"><span class="section-num">03</span><h2>How we use your data</h2></div>
+      <table class="data-table"><tbody>
+        <tr><td>Authentication</td><td>Your email and password let you log in securely across devices.</td></tr>
+        <tr><td>Cross-device sync</td><td>Brain facts, projects, and conversation history sync via Firebase so your data is available anywhere.</td></tr>
+        <tr><td>Usage enforcement</td><td>Daily broadcast count enforces the free tier of 5 broadcasts per day.</td></tr>
+        <tr><td>License verification</td><td>Your key is checked against Whop each session to confirm your Pro subscription.</td></tr>
+        <tr><td>Abuse prevention</td><td>IP rate limiting prevents mass account creation to abuse the free tier.</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="section" id="third-party">
+      <div class="section-header"><span class="section-num">04</span><h2>Third-party services</h2></div>
+      <p>We use these services to operate OmniChat. Each handles data under their own privacy policy:</p>
+      <div class="service-grid">
+        <div class="service-card"><div class="service-name">🔥 Firebase (Google)</div><div class="service-role">Authentication and Firestore database. Your account and synced data lives here.<br>firebase.google.com/support/privacy</div></div>
+        <div class="service-card"><div class="service-name">💳 Whop</div><div class="service-role">Payment processing and license management. We never see your card details.<br>whop.com/privacy</div></div>
+        <div class="service-card"><div class="service-name">☁️ Render</div><div class="service-role">Backend server hosting. May log request metadata (IP, timestamps).<br>render.com/privacy</div></div>
+        <div class="service-card"><div class="service-name">🔒 No AI services</div><div class="service-role">We share nothing with Claude, ChatGPT, Gemini or others. Their own policies govern your use of them.</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="security">
+      <div class="section-header"><span class="section-num">05</span><h2>Security</h2></div>
+      <table class="data-table"><tbody>
+        <tr><td>Password hashing</td><td>bcrypt with salt rounds — we cannot read your password.</td></tr>
+        <tr><td>Transport</td><td>All communication uses HTTPS/TLS encryption.</td></tr>
+        <tr><td>Token expiry</td><td>Auth tokens expire after 30 days and require re-login to refresh.</td></tr>
+        <tr><td>Local data</td><td>API keys and conversation cache stay in Chrome's local storage, never sent to us.</td></tr>
+        <tr><td>Database rules</td><td>Firebase security rules ensure each user can only access their own data.</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="section" id="rights">
+      <div class="section-header"><span class="section-num">06</span><h2>Your rights</h2></div>
+      <ul class="rights-list">
+        <li><div class="rights-icon">👁</div><div class="rights-content"><strong>Access</strong><span>Request a copy of all data we hold about you at any time.</span></div></li>
+        <li><div class="rights-icon">🗑</div><div class="rights-content"><strong>Deletion</strong><span>Request full deletion of your account and all associated data within 30 days.</span></div></li>
+        <li><div class="rights-icon">✏️</div><div class="rights-content"><strong>Correction</strong><span>Request correction of inaccurate personal data we hold.</span></div></li>
+        <li><div class="rights-icon">📦</div><div class="rights-content"><strong>Export</strong><span>Export your Brain facts, projects, and conversation history from the Settings tab in the extension.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="section" id="children">
+      <div class="section-header"><span class="section-num">07</span><h2>Children's privacy</h2></div>
+      <p>OmniChat is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with their data, contact us and we will delete it immediately.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-header"><span class="section-num">08</span><h2>Changes to this policy</h2></div>
+      <p>We may update this policy as OmniChat evolves. When we do, we update the effective date above. Continued use of OmniChat after changes means you accept the updated policy.</p>
+    </div>
+
+    <div class="contact-section" id="contact">
+      <h2>Questions or requests?</h2>
+      <p>To access, delete, or export your data — or if you have any questions about this policy.</p>
+      <a href="mailto:privacy@omnichat.app" class="email-btn">✉ empanian1@gmail.com</a>
+      <p style="margin-top:16px;font-size:12px;color:var(--muted)">We respond within 30 days.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer><p>© 2026 OmniChat &nbsp;·&nbsp; <a href="#tldr">Back to top ↑</a></p></footer>
+</body>
+</html>
